@@ -3,13 +3,11 @@ let playerHealth = 100;
 let playerAttack = 10;
 let playerMoney = 10;
 
-console.log(playerName, playerHealth, playerAttack);
-
-let enemyName = "Roborto";
+let enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 let enemyHealth = 50;
 let enemyAttack = 12;
 
-const fight = function () {
+const fight = function(enemyName) {
   window.alert("Welcome to Robot Wars.");
 
   const promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -63,4 +61,6 @@ const fight = function () {
   }
 }
 
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
